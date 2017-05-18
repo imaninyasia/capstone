@@ -1,0 +1,30 @@
+<h1>Signup!</h1>
+<%= form_tag '/users', method: :post do  %>
+<div id="signup">
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Username</span>
+  <input type="text" class="form-control" name="username" placeholder="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">@</span>
+  <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Password</span>
+  <input type="password" class="form-control" name="password" placeholder="Password" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Confirm Password</span>
+  <input type="password" class="form-control" name="password_confirmation" placeholder="Password" aria-describedby="basic-addon1">
+</div>
+
+
+ <input type="submit" style="width: 80px" value="Signup" class="form-control input-group input-group-addon" id="basic-addon1" aria-describedby="basic-addon1">
+</div>
+</div>
+
+
+<% end %>

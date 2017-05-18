@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="https://www.freepeople.com/" class="thumbnail">
+      <img src="http://images.taubman.com/www.shopinternationalplaza.com/asset/resize/32991/6/200/200.jpg" alt="...">
+    </a>
+  </div>
+
+  <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="http://www.brooksbrothers.com/" class="thumbnail">
+      <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Brooks_Brothers_Logo.png" alt="...">
+    </a>
+  </div>
+
+  <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="http://us.aritzia.com/" class="thumbnail">
+      <img src="https://www.mayfairshoppingcentre.com/media/stores/logos/Aritzia-women-clothing-logo_3elBgod.svg" alt="...">
+    </a>
+  </div>
+
+
+  <div class="jumbotron">
+  <h1 class="wtf">Having trouble finding a good place to shop?</h1>
+  <p>This is why I created WhichShop. Simply upload a photo of yourself and let me and AmazonRekognition do the work! You will get a personalized list of websites for you to shop at.</p>
+  <div class="go">
+  <% if current_user %>
+  <p><a class="btn btn-primary btn-lg" href="/uploads/new" role="button">Let's Go!</a></p>
+  <% else %>
+  <p><a class="btn btn-primary btn-lg" href="/login" role="button">Let's Go!</a></p>
+  <% end %>
+  </div>
+</div>
+
