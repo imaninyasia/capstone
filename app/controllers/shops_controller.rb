@@ -55,7 +55,13 @@ class ShopsController < ApplicationController
       @shops<<"Lane Bryant"
       @shops<<"Nordstrom - Women's"
       elsif ave_a>43 && ave_a<=55
+      @shops<<"Talbots"
+      @shops<<"Chicos"
+      @shops<<"Macys - Women's"
       elsif ave_a>55
+      @shops<<"J.Jill"
+      @shops<<"Cold Water Creek"
+      @shops<<"Lands' End - Women's"
       end
     elsif params[:gender_v]=="Male"
       p 'Man'
@@ -87,14 +93,68 @@ class ShopsController < ApplicationController
       @shops<<"APC Clothing"
       @shops<<"Ben Sherman"
       elsif ave_a>36 && ave_a<=43
+      @shops<<"Brooks Brothers"
+      @shops<<"Nordstrom - Men's"
+      @shops<<"Ralph Lauren - Purple Label"
       elsif ave_a>43 && ave_a<=55
+      @shops<<"Brooks Brothersd"
+      @shops<<"Mimi Fong"
+      @shops<<"Lord & Taylor - Men's"
       elsif ave_a>55
+      @shops<<"Brooks Brothersd"
+      @shops<<"Mimi Fong"
+      @shops<<"Lord & Taylor - Men's"
       end
 
     elsif params[:gender_v]=="Female"
       p "girl"
-
+      if ave_a>0 && ave_a<= 3
+      @shops << "Babies R' Us"
+      @shops << "Baby Gap"
+      @shops << "Little Owels"
+      elsif ave_a>3 && ave_a<=10
+      @shops<<"The Children's Place"
+      @shops<<"Macy's - Big Girl's Clothes"
+      @shops<<"Hannah Andersson"
+      elsif ave_a>10 && ave_a<=14
+      @shops<<"Claire's"
+      @shops<<"Icicles Clothing"
+      @shops<<"Hollister"
+      elsif ave_a>14 && ave_a<=18
+      @shops<<"Hot Topic"
+      @shops<<"Forever 21"
+      @shops<<"Wet Seal"
+      elsif ave_a>18 && ave_a<=24
+      @shops<<"American Apparel"
+      @shops<<"Bebe"
+      @shops<<"H&M"
+      elsif ave_a>24 && ave_a<=30
+      @shops<<"Aritzia"
+      @shops<<"Top Shop - Women's"
+      @shops<<"Banana Republic - Women's"
+      elsif ave_a>30 && ave_a<=36
+      @shops<<"Club Monaco"
+      @shops<<"Anthropologie"
+      @shops<<"All Saint's - Momen's"
+      elsif ave_a>36 && ave_a<=43
+      @shops<<"Ann Taylor"
+      @shops<<"Lane Bryant"
+      @shops<<"Nordstrom - Women's"
+      elsif ave_a>43 && ave_a<=55
+      @shops<<"Talbots"
+      @shops<<"Chicos"
+      @shops<<"Macys - Women's"
+      elsif ave_a>55
+      @shops<<"J.Jill"
+      @shops<<"Cold Water Creek"
+      @shops<<"Lands' End - Women's"
+      end
     end
+
+    if params[:age_l]== 'nil' || params[:age_h]=='nil' || params[:gender_v]=='nil' || params[:gender_c]== 'nil'
+      @shops << "We could not detect your age or gender, please upload a clearer photo of yourself."
+      @paramnil = 'nil'
+      end
     render 'shops.html.erb'
-  end
+end
 end

@@ -1,8 +1,11 @@
 <h1>Please upload a clear image of yourself</h1>
 
 <%= form_for(@upload) do |f| %>
-  <div>
-    <%= f.label :name %><br>
+  <div >
+  <div id="hide">
+  <%= f.label :names %>
+  <br>
+  </div>
     <%= f.file_field :name %>
   </div>
   <div>

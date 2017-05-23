@@ -48,10 +48,16 @@ class UploadsController < ApplicationController
                                         attributes: ["ALL"]
                                     })
     p '*' * 20
-    if resp == 'nil'
+    if resp.face_details[0] == nil
       p resp
       p "not able to recognize face details"
+      age_low = nil
+      age_high = nil
+      gender_value = nil
+      gender_conf = nil
+      redirect_to "/shops/nil/nil/nil/nil"
     else
+      p resp
       age_low = resp.face_details[0].age_range.low #=> Integer
       age_high = resp.face_details[0].age_range.high #=> Integer
       gender_value = resp.face_details[0].gender.value #=> String, one of "MALE", "FEMALE"
