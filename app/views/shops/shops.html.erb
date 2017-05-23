@@ -1,2 +1,5 @@
 <h1><%= @user %></h1>
 <h2> You should shop at</h2>
+<% @shops.each do |shop|%>
+<h3> <%= shop %></h3>
+<% end %>
